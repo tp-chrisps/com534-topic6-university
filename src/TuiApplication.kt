@@ -65,6 +65,4 @@ class TuiApplication {
             }
         }
     }
-
-    // TODO complete the onMenuItemSelected() defined by the interface.
 }
