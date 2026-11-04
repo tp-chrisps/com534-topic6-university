@@ -38,12 +38,41 @@ class TuiApplication {
         }
     }
 
+//    override fun onMenuItemSelected(choice: Int) {
+//        when (choice) {
+//            0-> addStudent()
+//            1-> searchForStudentById()
+//            2-> searchForStudentsByCourse()
+//        }
+//    }
+
+
+
     fun run() {
 
 
 
         // Array of handlers for each menu item.
-        val menuHandlers = arrayOf<MenuItemHandler> (this, this, this)
+
+//        val menuHandlers = arrayOf<MenuItemHandler> (object : MenuItemHandler {
+//            override fun onMenuItemSelected(choice: Int) {
+//                addStudent()
+//            }
+//        },
+//            object : MenuItemHandler {
+//                override fun onMenuItemSelected(choice: Int) {
+//                    searchForStudentById()
+//                }
+//            },
+//            object : MenuItemHandler {
+//                override fun onMenuItemSelected(choice: Int) {
+//                    searchForStudentsByCourse()
+//                }
+//            })
+        val menuHandlers = arrayOf<MenuItemHandler> (
+            MenuItemHandler { addStudent() },
+            MenuItemHandler { searchForStudentById() },
+            MenuItemHandler { searchForStudentsByCourse() })
 
         var running = true
         while (running) {
